@@ -1,0 +1,11 @@
+.vs/*
+vs_community/*/.vs/*
+vs_community/*/Debug/*
+vs_community/*/x64/Release/*
+!vs_community/*/x64/Release/*.dll
+vs_community/*/x64/Debug/*
+!vs_community/*/x64/Debug/*.dll
+vs_community/*/Release/*
+vs_community/*/log_dump.txt
+vs_community/*/ip.txt
+!*.dll
