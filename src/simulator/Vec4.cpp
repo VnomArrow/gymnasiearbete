@@ -8,6 +8,12 @@ Vec4::Vec4(PREDEC x, PREDEC y, PREDEC z, PREDEC w) {
 	this->z = z;
 	this->w = w;
 }
+Vec4::Vec4() {
+	this->x = 0;
+	this->y = 0;
+	this->z = 0;
+	this->w = 0;
+}
 
 void Vec4::update(PREDEC x, PREDEC y, PREDEC z, PREDEC w) {
 	this->x = x;

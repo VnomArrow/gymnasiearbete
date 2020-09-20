@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\FlipTest.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\SDL_gfx\SDL2_framerate.c" />
     <ClCompile Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives.c" />
@@ -145,6 +146,7 @@
     <ClCompile Include="..\..\src\utilities\windows\winsock_sockets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\FlipTest.h" />
     <ClInclude Include="..\..\src\mandelbrot_generator.h" />
     <ClInclude Include="..\..\src\SDL_gfx\SDL2_framerate.h" />
     <ClInclude Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives.h" />

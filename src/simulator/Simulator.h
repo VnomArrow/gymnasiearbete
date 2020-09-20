@@ -10,6 +10,14 @@ public:
 
 	void iterateSnapshot(float dt);
 
+	Vec4 getState();
+	PREDEC getm1();
+	PREDEC getm2();
+	PREDEC getl1();
+	PREDEC getl2();
+	PREDEC getg();
+
+
 	float getx1();
 	float gety1();
 
