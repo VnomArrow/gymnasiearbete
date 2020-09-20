@@ -1,6 +1,8 @@
 #include <iostream>
+#include "mandelbrot_generator.h"
 
-int main() {
+int wmain() {
+	mandelbrot_main();
 	// Print "hello world!"
 	std::cout << "hello world!" << std::endl;
 

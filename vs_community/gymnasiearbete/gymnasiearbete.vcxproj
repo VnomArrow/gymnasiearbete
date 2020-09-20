@@ -87,9 +87,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\SDL2;$(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -124,9 +127,52 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_framerate.c" />
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives.c" />
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_imageFilter.c" />
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_rotozoom.c" />
+    <ClCompile Include="..\..\src\utilities\data_transfer.cpp" />
+    <ClCompile Include="..\..\src\utilities\display.cpp" />
+    <ClCompile Include="..\..\src\utilities\id_handler.cpp" />
+    <ClCompile Include="..\..\src\utilities\logger.cpp" />
+    <ClCompile Include="..\..\src\utilities\server_class.cpp" />
+    <ClCompile Include="..\..\src\utilities\thread_synchronization.cpp" />
+    <ClCompile Include="..\..\src\utilities\windows\winsock_sockets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\mandelbrot_generator.h" />
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_framerate.h" />
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives.h" />
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives_font.h" />
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_imageFilter.h" />
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_rotozoom.h" />
     <ClInclude Include="..\..\src\search.h" />
+    <ClInclude Include="..\..\src\utilities\byte_functions.h" />
+    <ClInclude Include="..\..\src\utilities\char_array_storage.h" />
+    <ClInclude Include="..\..\src\utilities\class_types.h" />
+    <ClInclude Include="..\..\src\utilities\data_transfer.h" />
+    <ClInclude Include="..\..\src\utilities\display.h" />
+    <ClInclude Include="..\..\src\utilities\event_handler.h" />
+    <ClInclude Include="..\..\src\utilities\id_handler.h" />
+    <ClInclude Include="..\..\src\utilities\logger.h" />
+    <ClInclude Include="..\..\src\utilities\math_functions.h" />
+    <ClInclude Include="..\..\src\utilities\memory_leak_detector.h" />
+    <ClInclude Include="..\..\src\utilities\mutex.h" />
+    <ClInclude Include="..\..\src\utilities\network_sockets.h" />
+    <ClInclude Include="..\..\src\utilities\random_functions.h" />
+    <ClInclude Include="..\..\src\utilities\ray_casting.h" />
+    <ClInclude Include="..\..\src\utilities\server_class.h" />
+    <ClInclude Include="..\..\src\utilities\string_functions.h" />
+    <ClInclude Include="..\..\src\utilities\thread.h" />
+    <ClInclude Include="..\..\src\utilities\thread_synchronization.h" />
+    <ClInclude Include="..\..\src\utilities\time_functions.h" />
+    <ClInclude Include="..\..\src\utilities\windows\winsock_sockets.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\SDL_gfx\ChangeLog" />
+    <None Include="..\..\src\SDL_gfx\configure" />
+    <None Include="..\..\src\SDL_gfx\INSTALL" />
+    <None Include="..\..\src\SDL_gfx\README" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
