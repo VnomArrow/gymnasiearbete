@@ -4,10 +4,167 @@
     <Filter Include="src">
       <UniqueIdentifier>{77c19401-b2ca-4f92-8357-f4f1ef6665e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="utilities">
+      <UniqueIdentifier>{8a82fc4a-0a00-4774-a8e1-472b4d297e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities\windows">
+      <UniqueIdentifier>{cfd88b09-52f2-47b8-b218-0cf27ed0a2ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdl_gfx">
+      <UniqueIdentifier>{8ce9d610-4203-407e-9ef0-1878b6615a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simulator">
+      <UniqueIdentifier>{395e8f70-6c96-4d0f-a815-597329429466}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\utilities\data_transfer.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utilities\display.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utilities\id_handler.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utilities\logger.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utilities\server_class.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utilities\thread_synchronization.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utilities\windows\winsock_sockets.cpp">
+      <Filter>utilities\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_framerate.c">
+      <Filter>sdl_gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives.c">
+      <Filter>sdl_gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_imageFilter.c">
+      <Filter>sdl_gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SDL_gfx\SDL2_rotozoom.c">
+      <Filter>sdl_gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\simulator\Simulator.cpp">
+      <Filter>simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\simulator\Vec4.cpp">
+      <Filter>simulator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\search.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mandelbrot_generator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\byte_functions.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\char_array_storage.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\class_types.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\data_transfer.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\display.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\event_handler.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\id_handler.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\logger.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\math_functions.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\memory_leak_detector.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\mutex.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\network_sockets.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\random_functions.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\ray_casting.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\server_class.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\string_functions.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\thread.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\thread_synchronization.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\time_functions.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utilities\windows\winsock_sockets.h">
+      <Filter>utilities\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_framerate.h">
+      <Filter>sdl_gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives.h">
+      <Filter>sdl_gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_gfxPrimitives_font.h">
+      <Filter>sdl_gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_imageFilter.h">
+      <Filter>sdl_gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SDL_gfx\SDL2_rotozoom.h">
+      <Filter>sdl_gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\simulator\precisionType.h">
+      <Filter>simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\simulator\Simulator.h">
+      <Filter>simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\simulator\Vec4.h">
+      <Filter>simulator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\SDL_gfx\ChangeLog">
+      <Filter>sdl_gfx</Filter>
+    </None>
+    <None Include="..\..\src\SDL_gfx\configure">
+      <Filter>sdl_gfx</Filter>
+    </None>
+    <None Include="..\..\src\SDL_gfx\INSTALL">
+      <Filter>sdl_gfx</Filter>
+    </None>
+    <None Include="..\..\src\SDL_gfx\README">
+      <Filter>sdl_gfx</Filter>
+    </None>
   </ItemGroup>
 </Project>
