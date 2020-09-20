@@ -103,7 +103,7 @@ void setPositionsInsideCircle() {
 
 int search_main() {
 	// Create a 10x10 grid
-	Grid my_grid = Grid(10, 10);
+	Grid my_grid = Grid(100, 100);
 	SearchPosition pos;
 	pos.x = 5;
 	pos.y = 5;
@@ -114,5 +114,6 @@ int search_main() {
 		my_grid.setState(recv_pos, Grid::status_is_true);
 		std::cout << "X: " << recv_pos.x << "  Y: " << recv_pos.y << std::endl;
 	}
+	return 0;
 
 }
