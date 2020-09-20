@@ -3,6 +3,7 @@
 #include "simulator/Simulator.h"
 #include "simulator/Vec4.h"
 #include "search.h"
+#include "FlipTest.h"
 
 int wmain() {
 	DisplayWindow::init(800, 800);
@@ -29,11 +30,13 @@ int wmain() {
 	Vec4 vec = Vec4(3, 4, 0, 0);
 	Simulator simulator = Simulator(vec, 100, 100, 100, 100, 10);
 	while (DisplayWindow::isRunning()) {
-		simulator.iterateSnapshot(0.01);
+		//simulator.iterateSnapshot(0.01);
+		if (ft.flips())
+			std::cout << "FLIPPAR!!!!!!" << std::endl;
 		DisplayWindow::fill(0, 0, 0, 255);
 		DisplayWindow::drawRectangle(400, 400, 20, 20, 0, 0, 255, 255);
-		DisplayWindow::drawRectangle(400 - simulator.getx1(), 400 - simulator.gety1(), 20, 20, 255, 0, 0, 255);
-		DisplayWindow::drawRectangle(400 - simulator.getx2(), 400 - simulator.gety2(), 20, 20, 0, 255, 0, 255);
+		DisplayWindow::drawRectangle(400 - ft.getSim().getx1(), 400 - ft.getSim().gety1(), 20, 20, 255, 0, 0, 255);
+		DisplayWindow::drawRectangle(400 - ft.getSim().getx2(), 400 - ft.getSim().gety2(), 20, 20, 0, 255, 0, 255);
 		DisplayWindow::flip();
 		DisplayWindow::update();
 	}

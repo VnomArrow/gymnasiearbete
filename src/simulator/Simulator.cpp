@@ -25,12 +25,31 @@ void Simulator::iterateSnapshot(float dt) {
 
 	Vec4 stateChange = k1.add(k2.mul(2).add(k3.mul(2).add(k4))).mul(dt / 6);
 
-	PREDEC a = PREfmod(state->getx() + stateChange.getx(), 6.28318530718);
-	PREDEC b = PREfmod(state->gety() + stateChange.gety(), 6.28318530718);
+	PREDEC a = PREfmod(PREfmod(state->getx() + stateChange.getx(), 6.28318530718) + 6.28318530718, 6.28318530718);
+	PREDEC b = PREfmod(PREfmod(state->gety() + stateChange.gety(), 6.28318530718) + 6.28318530718, 6.28318530718);
 	PREDEC da = state->getz() + stateChange.getz();
 	PREDEC db = state->getw() + stateChange.getw();
 
 	this->state->update(a, b, da, db);
+}
+
+Vec4 Simulator::getState() {
+	return Vec4(state->getx(), state->gety(), state->getz(), state->getw());
+}
+PREDEC Simulator::getm1() {
+	return m1;
+}
+PREDEC Simulator::getm2() {
+	return m2;
+}
+PREDEC Simulator::getl1() {
+	return l1;
+}
+PREDEC Simulator::getl2() {
+	return l2;
+}
+PREDEC Simulator::getg() {
+	return g;
 }
 
 float Simulator::getx1() {
