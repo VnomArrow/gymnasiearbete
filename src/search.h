@@ -14,26 +14,41 @@ struct SearchPosition {
 };
 
 struct Grid {
+	// The state a pixel on the screen is
 	enum {
 		status_unsearched,
 		status_pending,
 		status_is_true,
 		status_is_false,
 	};
+
+	// Generate a grid
 	Grid(int t_width, int t_height) :
 		m_width(t_width), m_height(t_height) {
 		grid_array.resize(width * height);
 	}
+
+	// Get a position inside the grid
 	char* getPos(int x, int y) {
 		return(&grid_array[x + y * width]);
 	}
+
+	// Set the state of a position inside the grid
 	void setState(SearchPosition& pos, char state) {
 		*getPos(pos.x, pos.y) = state;
 	}
+
+	// The width and height of grid
 	const int& width = m_width;
 	const int& height = m_height;
+
+	// The grid itself
 	std::vector<char> grid_array;
+
+	// Positions that are waiting to be searched
 	std::list<SearchPosition> search_list;
+
+	// Get the oldest position that want to be searched
 	bool getUnsearchedPos(SearchPosition& search_pos_ref) {
 		if (search_list.size()) {
 			search_pos_ref = search_list.front();
@@ -42,13 +57,15 @@ struct Grid {
 		}
 		return false;
 	}
-	// See if a position is valid
+
+	// See if a position is valid and not ouside range
 	bool isValidX(int pos_x) {
 		return (pos_x >= 0 && pos_x < width);
 	}
 	bool isValidY(int pos_y) {
 		return (pos_y >= 0 && pos_y < height);
 	}
+
 	// Add position and surrounding positions to search
 	void addSearchPosition(const SearchPosition& t_pos) {
 		// Centre
@@ -94,12 +111,6 @@ protected:
 	int m_width;
 	int m_height;
 };
-
-void setPositionsInsideCircle() {
-	double x;
-	double y;
-
-}
 
 int search_main() {
 	// Create a 10x10 grid
